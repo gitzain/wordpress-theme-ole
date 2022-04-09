@@ -1,0 +1,875 @@
+/*
+	Theme Name: Ole
+	Theme URI: http://iamzain.com
+	Description: Ole WordPress Theme
+	Version: 0.1
+	Author: Zain Khan
+	Author URI: http://iamzain.com
+	Tags: Podcast
+*/
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+h1, h2, h3, h4 {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+	font-style: normal;
+    font-size: 24px;
+    letter-spacing: .075em;
+    line-height: 1.2em;
+    text-transform: none;
+    text-decoration: none;
+    color: #222;
+
+    	font-size: 32px;
+	text-transform: uppercase;
+	margin-bottom: 0.75em;
+}
+
+h2 {
+	font-style: normal;
+	font-size: 24px;
+	letter-spacing: .075em;
+	line-height: 1.2em;
+	text-transform: none;
+	text-decoration: none;
+	color: #222;
+	margin-top: 2em;
+	margin-bottom: 0.75em;
+}
+
+.badass-title{
+	font-style: normal;
+	font-size: 24px;
+	letter-spacing: .075em;
+	line-height: 1.2em;
+	text-transform: none;
+	text-decoration: none;
+	color: #222;
+	margin-top: 2em;
+	margin-bottom: 0.75em;
+}
+
+.page-title {
+	font-size: 32px;
+	text-transform: uppercase;
+	margin-bottom: 0.75em;
+}
+
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+
+/* global box-sizing */
+
+*,
+*:after,
+*:before {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+
+/* html element 62.5% font-size for REM use */
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: proxima-nova, sans-serif;
+	color: #444;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 13px;
+	letter-spacing: .02em;
+	line-height: 2.2em;
+	text-transform: none;
+	color: rgba(82, 82, 82, .6);
+	border: 10px solid white;
+}
+
+
+/* clear */
+
+.clear:before,
+.clear:after {
+	content: ' ';
+	display: table;
+}
+
+.clear:after {
+	clear: both;
+}
+
+.clear {
+	*zoom: 1;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: bottom;
+}
+
+a {
+	color: #444;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #444;
+}
+
+a:focus {
+	outline: 0;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+input:focus {
+	outline: 0;
+	border: 1px solid #04A4CC;
+}
+
+/* span */
+
+span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+
+.wrapper {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 25px;
+	margin-top: 5px;
+}
+
+/* mobile nav */
+
+.hamburger-menu {
+
+	position: absolute;
+
+	right: 30px;
+
+    top: 30px;
+
+
+}
+	
+.nav {
+
+	display: none;
+
+	    float: right;
+
+}
+
+/* Tablet portrait up */
+@media (min-width: 600px) {
+
+	.hamburger-menu {
+
+		display: none;
+
+	}
+
+	.nav {
+
+		display: block;
+
+	}
+
+}
+
+.overlay {
+
+    height: 100%;
+
+    width: 0;
+
+    position: fixed;
+
+    z-index: 10;
+
+    top: 0;
+
+    left: 0;
+
+    background-color: rgb(0,0,0);
+
+    background-color: rgba(0,0,0, 0.95);
+
+    overflow-x: hidden;
+
+    transition: 0.5s;
+
+}
+
+.overlay a {
+
+    text-decoration: none;
+
+    font-size: 34px;
+
+    color: #818181;
+
+    display: block;
+
+    transition: 0.3s;
+
+    padding: 8px 0;
+
+}
+
+.overlay a:hover, .overlay a:focus {
+
+    color: #f1f1f1;
+
+}
+
+.overlay ul, .overlay ol {
+
+	margin: 0;
+
+	list-style: none;
+
+    padding-left: 0;
+
+}
+
+.overlay-content {
+
+    position: relative;
+
+    top: 25%;
+
+    width: 100%;
+
+    text-align: center;
+
+}
+
+.overlay .closebtn {
+
+	position: absolute;
+
+	top: 30px;
+
+	right: 25px;
+
+	font-size: 60px;
+
+	padding: 0px;
+
+ }
+
+/* logo */
+
+.logo {
+
+}
+
+.logo-img {
+
+}
+
+.branding {
+	text-align: center;
+    display: block !important;
+    letter-spacing: 0 !important;
+    margin: 0 !important;
+}
+
+/* Tablet portrait up */
+@media (min-width: 600px) {
+
+	.branding {
+
+		text-align: left;
+
+		float: left;
+
+		width: 50%;
+	}
+
+}
+
+.title {
+	font-family: sans-serif !important;
+	font-weight: 700;
+	font-style: normal;
+	font-size: 42px;
+    letter-spacing: -0.01em;
+	line-height: .9em;
+	text-transform: uppercase;
+	color: #000;
+	margin: 0;
+
+}
+
+/* Tablet portrait up */
+@media (min-width: 600px) {
+
+	.title {
+		font-size: 36px;
+	}
+
+}
+
+.subtitle {
+	font-family: proxima-nova, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    line-height: 2em;
+    font-size: 13px;
+    letter-spacing: 0px;
+    font-size: 12px;
+    line-height: 1em;
+    text-transform: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-style: normal;
+    color: #6b6b6b;
+    margin-top: .7em;
+    width: 100%;
+}
+
+/* Tablet portrait up */
+@media (min-width: 600px) {
+
+	.subtitle {
+
+		display: none;
+
+	}
+
+}
+
+/* nav */
+
+.nav {
+	font-weight: 600;
+	font-style: normal;
+	font-size: 9.75px;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+}
+
+.nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.nav li {
+	float: left;
+}
+
+.nav li a {
+	display: inline-block;
+	text-align: center;
+	margin: 0 .618em;
+	padding: .618em 0;
+	text-decoration: none;
+	color: rgba(82, 82, 82, .7);
+	transition: color 170ms ease-in-out, background-color 170ms ease-in-out;
+}
+
+.nav li a:hover {
+
+}
+
+.header {
+    margin: 30px 0;
+}
+
+
+.intro {
+
+	margin: 60px 0;
+
+	overflow: auto;
+
+	width: 100%;
+
+	display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.albumart {
+
+	text-align: center;
+	/* border: 4px solid black; */
+}
+
+/* Tablet portrait up */
+@media (min-width: 600px) { 
+	.albumart {
+
+		float: left;
+
+		width: 50%;
+
+	}
+}
+
+.subtitle2 {
+
+	 font-family: 'Open Sans Condensed', sans-serif;
+
+	display: none;
+
+	float: right;
+    
+    width: 50%;
+
+    font-weight: 700;
+
+    font-style: normal;
+
+    font-size: 2.2em;
+
+    letter-spacing: .075em;
+
+    line-height: 1.2em;
+
+    text-transform: uppercase;
+
+    text-align: center;
+
+    color: #000;
+
+    padding-left: 25px;
+
+}
+
+/* Tablet portrait up */
+@media (min-width: 600px) { 
+	.subtitle2 {
+
+		display: block;
+
+	}
+}
+
+
+
+.main {
+	margin: 60px 0;
+}
+
+
+.pagination {
+	margin-top: 2.5em;
+}
+
+
+.post {
+	padding-bottom: 10px;
+	margin-bottom: 35px;
+}
+
+.powerpress_player {
+	padding-bottom: 10px;
+}
+
+.footer {
+	margin: 75px 0 10px 0;
+}
+
+.copyright {
+	font-weight: 600;
+	font-style: normal;
+	font-size: 10px;
+	letter-spacing: .2em;
+	line-height: 1.8em;
+	text-transform: uppercase;
+}
+
+.comment-respond {
+    margin: 0 !important;
+}
+
+.comments {
+
+}
+
+.comment-form-comment input, select, textarea {
+	resize: none;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    width: 100%;
+    height: 10em;
+    border-bottom: none;
+}
+
+.form-submit
+{
+	text-align: right;
+    padding: 10px;
+    border: 1px #eaeaea solid;
+    border-color: rgba(0,0,0,.1);
+    border-width: 0 1px 1px;
+    border-radius: 0 0 3px 3px;
+    margin: 0;
+}
+
+.comment-form-comment {
+	margin: 0;
+}
+
+.submit {
+    border-radius: 3px;
+
+    font-family: proxima-nova;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+
+	background-color: #272727;
+	border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font: 12px/1em 'Helvetica Neue',helvetica,arial,sans-serif;
+    font-weight: normal;
+    padding: 14px 18px;
+    position: relative;
+    text-align: center;
+    width: 150px;
+    letter-spacing: 0.05em;
+
+
+}
+
+input {
+	width: 100%;
+	padding: 10px;
+
+	resize: none;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.comments ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.comment {
+	margin: 3em 0;
+    transition: all .2s ease-out;
+    border-bottom: 1px solid #ddd;
+    border-color: rgba(0,0,0,.1);
+
+}
+
+.comment-header {
+
+	padding: 15px 0 15px 49px;
+
+	min-height: 34px;
+
+	position: relative;
+
+	overflow: hidden;
+
+}
+
+.comment-author
+{
+    font-size: 1em;
+    line-height: 1.3em;
+    font-weight: 700;
+}
+
+.comment-data
+{
+
+}
+
+.comment p
+{
+	margin: 0;
+	padding-bottom: 2em;
+}
+
+.comment-meta {
+	line-height: 1.3em;
+	font-size: .8em;
+    display: inline-block;
+    font-family: proxima-nova;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: .02em;
+        text-transform: none;
+    color: rgba(82,82,82,.6);
+
+}
+
+.comment-author img 
+{
+	width: 34px;
+    height: 34px;
+    float: left;
+    margin-left: -49px;
+}
+
+.comment-data {
+	    padding-left: 49px;
+}
+
+.controls
+{
+    height: 34px;
+    position: absolute;
+    right: 0px;
+    top: 15px;
+    line-height: 34px;
+
+}
+
+
+#comment-1
+{
+	border-top: none;
+}
+
+.comment-respond {
+	margin: 40px 0 0 0;
+}
+
+
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+
+/* mobile break point */
+
+@media only screen and (min-width:320px) {}
+
+
+/* tablet break point */
+
+@media only screen and (min-width:720px) {}
+
+
+/* desktop break point */
+
+@media only screen and (min-width:1024px) {
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),
+only screen and (min-resolution:144dpi) {}
+
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background: #04A4CC;
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-webkit-selection {
+	background: #04A4CC;
+	color: #FFF;
+	text-shadow: none;
+}
+
+::-moz-selection {
+	background: #04A4CC;
+	color: #FFF;
+	text-shadow: none;
+}
+
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+	display: block;
+	margin: 5px auto 5px auto;
+}
+
+.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+	float: right;
+	margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+	float: left;
+	margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	background: #FFF;
+	border: 1px solid #F0F0F0;
+	max-width: 96%;
+	padding: 5px 3px 10px;
+	text-align: center;
+}
+
+.wp-caption.alignnone {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+	margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+	margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+	border: 0 none;
+	height: auto;
+	margin: 0;
+	max-width: 98.5%;
+	padding: 0;
+	width: auto;
+}
+
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size: 11px;
+	line-height: 17px;
+	margin: 0;
+	padding: 0 4px 5px;
+}
+
+.sticky {}
+
+.bypostauthor {}
+
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background: transparent !important;
+		color: #000 !important;
+		box-shadow: none !important;
+		text-shadow: none !important;
+	}
+	a,
+	a:visited {
+		text-decoration: underline;
+	}
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content: "";
+	}
+	pre,
+	blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	thead {
+		display: table-header-group;
+	}
+	tr,
+	img {
+		page-break-inside: avoid;
+	}
+	img {
+		max-width: 100% !important;
+	}
+	@page {
+		margin: 0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans: 3;
+		widows: 3;
+	}
+	h2,
+	h3 {
+		page-break-after: avoid;
+	}
+}
+
+
+
+
